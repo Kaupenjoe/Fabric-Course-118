@@ -8,6 +8,7 @@ public class MCCourseMod implements ModInitializer {
 	public static final String MOD_ID = "mccourse";
 	public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
 
+	// A Comment
 	@Override
 	public void onInitialize() {
 
