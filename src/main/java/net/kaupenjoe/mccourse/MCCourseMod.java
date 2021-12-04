@@ -1,6 +1,7 @@
 package net.kaupenjoe.mccourse;
 
 import net.fabricmc.api.ModInitializer;
+import net.kaupenjoe.mccourse.item.ModItems;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -12,7 +13,6 @@ public class MCCourseMod implements ModInitializer {
 	@Override
 	public void onInitialize() {
 
-
-		LOGGER.info("Hello Fabric world!");
+		ModItems.registerModItems();
 	}
 }
