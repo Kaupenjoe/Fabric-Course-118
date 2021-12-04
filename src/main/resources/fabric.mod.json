@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "mccourse",
+  "version": "${version}",
+
+  "name": "MCCourse Fabric Mod",
+  "description": "A Mod to teach others Fabric Minecraft Modding",
+  "authors": [
+    "Kaupenjoe"
+  ],
+  "contact": {
+    "homepage": "https://kaupenjoe.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "MIT",
+  "icon": "assets/modid/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.kaupenjoe.mccourse.MCCourseMod"
+    ]
+  },
+  "mixins": [
+    "mccourse.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.18.x",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
