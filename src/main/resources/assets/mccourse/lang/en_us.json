@@ -3,5 +3,7 @@
   "item.mccourse.orichalcum_nugget": "Orichalcum Nugget",
 
   "block.mccourse.orichalcum_block": "Orichalcum Block",
-  "block.mccourse.orichalcum_ore": "Orichalcum Ore"
+  "block.mccourse.orichalcum_ore": "Orichalcum Ore",
+
+  "itemGroup.mccourse.course": "Course Tab"
 }
