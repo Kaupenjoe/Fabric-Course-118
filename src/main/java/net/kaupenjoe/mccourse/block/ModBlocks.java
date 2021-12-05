@@ -3,10 +3,13 @@ package net.kaupenjoe.mccourse.block;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.kaupenjoe.mccourse.MCCourseMod;
+import net.kaupenjoe.mccourse.block.custom.ModStairsBlock;
 import net.kaupenjoe.mccourse.block.custom.SpeedyBlock;
 import net.kaupenjoe.mccourse.item.ModItemGroups;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
+import net.minecraft.block.SlabBlock;
+import net.minecraft.block.StairsBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -28,6 +31,13 @@ public class ModBlocks {
 
     public static final Block SPEEDY_BLOCK = registerBlock("speedy_block",
             new SpeedyBlock(FabricBlockSettings.of(Material.STONE).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
+
+    public static final Block ORICHALCUM_STAIRS = registerBlock("orichalcum_stairs",
+            new ModStairsBlock(ModBlocks.ORICHALCUM_BLOCK.getDefaultState(),
+                    FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
+
+    public static final Block ORICHALCUM_SLAB = registerBlock("orichalcum_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
 
 
     private static Block registerBlock(String name, Block block, ItemGroup group) {
