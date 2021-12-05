@@ -15,6 +15,9 @@
   "block.mccourse.orichalcum_slab": "Orichalcum Slab",
   "block.mccourse.orichalcum_button": "Orichalcum Button",
   "block.mccourse.orichalcum_pressure_plate": "Orichalcum Pressure Plate",
+  "block.mccourse.orichalcum_fence": "Orichalcum Fence",
+  "block.mccourse.orichalcum_fence_gate": "Orichalcum Fence Gate",
+  "block.mccourse.orichalcum_wall": "Orichalcum Wall",
 
   "itemGroup.mccourse.course": "Course Tab",
 

@@ -46,6 +46,16 @@ public class ModBlocks {
                     FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
 
 
+    public static final Block ORICHALCUM_FENCE = registerBlock("orichalcum_fence",
+            new FenceBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
+
+    public static final Block ORICHALCUM_FENCE_GATE = registerBlock("orichalcum_fence_gate",
+            new FenceGateBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
+
+    public static final Block ORICHALCUM_WALL = registerBlock("orichalcum_wall",
+            new WallBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
+
+
     private static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);
         return Registry.register(Registry.BLOCK, new Identifier(MCCourseMod.MOD_ID, name), block);
