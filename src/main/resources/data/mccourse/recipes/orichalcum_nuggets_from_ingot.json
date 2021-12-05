@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "mccourse:orichalcum_ingot"
+    }
+  ],
+  "result": {
+    "item": "mccourse:orichalcum_nugget",
+    "count": 9
+  }
+}
