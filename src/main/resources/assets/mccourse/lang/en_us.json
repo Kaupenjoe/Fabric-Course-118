@@ -2,11 +2,14 @@
   "item.mccourse.orichalcum_ingot": "Orichalcum Ingot",
   "item.mccourse.orichalcum_nugget": "Orichalcum Nugget",
   "item.mccourse.raw_orichalcum": "Raw Orichalcum",
+  "item.mccourse.dowsing_rod": "Dowsing Rod",
 
   "block.mccourse.orichalcum_block": "Orichalcum Block",
   "block.mccourse.orichalcum_ore": "Orichalcum Ore",
   "block.mccourse.raw_orichalcum_block": "Raw Orichalcum Block",
   "block.mccourse.deepslate_orichalcum_ore": "Deepslate Orichalcum Ore",
 
-  "itemGroup.mccourse.course": "Course Tab"
+  "itemGroup.mccourse.course": "Course Tab",
+
+  "item.mccourse.dowsing_rod.no_valuables": "No Valuables found!"
 }
