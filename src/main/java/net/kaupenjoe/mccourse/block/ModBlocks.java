@@ -3,10 +3,7 @@ package net.kaupenjoe.mccourse.block;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.kaupenjoe.mccourse.MCCourseMod;
-import net.kaupenjoe.mccourse.block.custom.ModPressurePlateBlock;
-import net.kaupenjoe.mccourse.block.custom.ModStairsBlock;
-import net.kaupenjoe.mccourse.block.custom.ModStoneButtonBlock;
-import net.kaupenjoe.mccourse.block.custom.SpeedyBlock;
+import net.kaupenjoe.mccourse.block.custom.*;
 import net.kaupenjoe.mccourse.item.ModItemGroups;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
@@ -54,6 +51,14 @@ public class ModBlocks {
 
     public static final Block ORICHALCUM_WALL = registerBlock("orichalcum_wall",
             new WallBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
+
+    public static final Block CHERRY_BLOSSOM_DOOR = registerBlock("cherry_blossom_door",
+            new ModDoorBlock(FabricBlockSettings.of(Material.WOOD).strength(4.0f).requiresTool().nonOpaque()), ModItemGroups.COURSE);
+
+    public static final Block CHEERY_BLOSSOM_TRAPDOOR = registerBlock("cherry_blossom_trapdoor",
+            new ModTrapdoorBlock(FabricBlockSettings.of(Material.WOOD).strength(4.0f).requiresTool().nonOpaque()), ModItemGroups.COURSE);
+
+
 
 
     private static Block registerBlock(String name, Block block, ItemGroup group) {

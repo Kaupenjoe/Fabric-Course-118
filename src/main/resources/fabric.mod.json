@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "net.kaupenjoe.mccourse.MCCourseMod"
+    ],
+    "client": [
+      "net.kaupenjoe.mccourse.MCCourseClient"
     ]
   },
   "mixins": [
