@@ -3,10 +3,8 @@ package net.kaupenjoe.mccourse.item;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.kaupenjoe.mccourse.MCCourseMod;
 import net.kaupenjoe.mccourse.item.custom.*;
-import net.minecraft.item.Item;
-import net.minecraft.item.PickaxeItem;
-import net.minecraft.item.ShovelItem;
-import net.minecraft.item.SwordItem;
+import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -52,6 +50,18 @@ public class ModItems {
                     new FabricItemSettings().group(ModItemGroups.COURSE)));
 
 
+    public static final Item ORICHALCUM_HELMET = registerItem("orichalcum_helmet",
+            new ArmorItem(ModArmorMaterials.ORICHALCUM, EquipmentSlot.HEAD,
+                    new FabricItemSettings().group(ModItemGroups.COURSE)));
+    public static final Item ORICHALCUM_CHESTPLATE = registerItem("orichalcum_chestplate",
+            new ArmorItem(ModArmorMaterials.ORICHALCUM, EquipmentSlot.CHEST,
+                    new FabricItemSettings().group(ModItemGroups.COURSE)));
+    public static final Item ORICHALCUM_LEGGINGS = registerItem("orichalcum_leggings",
+            new ArmorItem(ModArmorMaterials.ORICHALCUM, EquipmentSlot.LEGS,
+                    new FabricItemSettings().group(ModItemGroups.COURSE)));
+    public static final Item ORICHALCUM_BOOTS = registerItem("orichalcum_boots",
+            new ArmorItem(ModArmorMaterials.ORICHALCUM, EquipmentSlot.FEET,
+                    new FabricItemSettings().group(ModItemGroups.COURSE)));
 
 
     private static Item registerItem(String name, Item item) {
