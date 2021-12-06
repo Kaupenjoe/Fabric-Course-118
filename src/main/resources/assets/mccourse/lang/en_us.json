@@ -5,6 +5,11 @@
   "item.mccourse.dowsing_rod": "Dowsing Rod",
   "item.mccourse.turnip": "Turnip",
   "item.mccourse.coal_sliver": "Coal Sliver",
+  "item.mccourse.orichalcum_pickaxe": "Orichalcum Pickaxe",
+  "item.mccourse.orichalcum_axe": "Orichalcum Axe",
+  "item.mccourse.orichalcum_shovel": "Orichalcum Shovel",
+  "item.mccourse.orichalcum_hoe": "Orichalcum Hoe",
+  "item.mccourse.orichalcum_sword": "Orichalcum Sword",
 
   "block.mccourse.orichalcum_block": "Orichalcum Block",
   "block.mccourse.orichalcum_ore": "Orichalcum Ore",
