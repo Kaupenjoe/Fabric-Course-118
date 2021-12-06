@@ -63,6 +63,10 @@ public class ModItems {
             new ArmorItem(ModArmorMaterials.ORICHALCUM, EquipmentSlot.FEET,
                     new FabricItemSettings().group(ModItemGroups.COURSE)));
 
+    public static final Item ORICHALCUM_HORSE_ARMOR = registerItem("orichalcum_horse_armor",
+            new HorseArmorItem(15, "orichalcum",
+                    new FabricItemSettings().group(ModItemGroups.COURSE)));
+
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(MCCourseMod.MOD_ID, name), item);
