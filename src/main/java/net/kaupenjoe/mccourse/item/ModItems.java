@@ -2,10 +2,7 @@ package net.kaupenjoe.mccourse.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.kaupenjoe.mccourse.MCCourseMod;
-import net.kaupenjoe.mccourse.item.custom.DowsingRodItem;
-import net.kaupenjoe.mccourse.item.custom.ModAxeItem;
-import net.kaupenjoe.mccourse.item.custom.ModHoeItem;
-import net.kaupenjoe.mccourse.item.custom.ModPickaxeItem;
+import net.kaupenjoe.mccourse.item.custom.*;
 import net.minecraft.item.Item;
 import net.minecraft.item.PickaxeItem;
 import net.minecraft.item.ShovelItem;
@@ -48,6 +45,10 @@ public class ModItems {
                     new FabricItemSettings().group(ModItemGroups.COURSE)));
     public static final Item ORICHALCUM_SWORD = registerItem("orichalcum_sword",
             new SwordItem(ModToolMaterial.ORICHALCUM, 3, 3f,
+                    new FabricItemSettings().group(ModItemGroups.COURSE)));
+
+    public static final Item ORICHALCUM_PAXEL = registerItem("orichalcum_paxel",
+            new ModPaxelItem(ModToolMaterial.ORICHALCUM, 1, 1f,
                     new FabricItemSettings().group(ModItemGroups.COURSE)));
 
 
