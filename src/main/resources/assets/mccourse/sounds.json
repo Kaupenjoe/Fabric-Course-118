@@ -4,5 +4,35 @@
     "sounds": [
       "mccourse:dowsing_rod_found_ore"
     ]
+  },
+  "orichalcum_lamp_break": {
+    "subtitle": "mccourse.orichalcum_lamp_break",
+    "sounds": [
+      "mccourse:orichalcum_lamp_break"
+    ]
+  },
+  "orichalcum_lamp_step": {
+    "subtitle": "mccourse.orichalcum_lamp_step",
+    "sounds": [
+      "mccourse:orichalcum_lamp_step"
+    ]
+  },
+  "orichalcum_lamp_place": {
+    "subtitle": "mccourse.orichalcum_lamp_place",
+    "sounds": [
+      "mccourse:orichalcum_lamp_place"
+    ]
+  },
+  "orichalcum_lamp_hit": {
+    "subtitle": "mccourse.orichalcum_lamp_hit",
+    "sounds": [
+      "mccourse:orichalcum_lamp_hit"
+    ]
+  },
+  "orichalcum_lamp_fall": {
+    "subtitle": "mccourse.orichalcum_lamp_fall",
+    "sounds": [
+      "mccourse:orichalcum_lamp_fall"
+    ]
   }
 }

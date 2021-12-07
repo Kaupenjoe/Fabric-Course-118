@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.kaupenjoe.mccourse.MCCourseMod;
 import net.kaupenjoe.mccourse.block.custom.*;
 import net.kaupenjoe.mccourse.item.ModItemGroups;
+import net.kaupenjoe.mccourse.sound.ModSounds;
 import net.minecraft.block.*;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
@@ -62,7 +63,8 @@ public class ModBlocks {
 
     public static final Block ORICHALCUM_LAMP = registerBlock("orichalcum_lamp",
             new OrichalcumLampBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()
-                    .luminance((state) -> state.get(OrichalcumLampBlock.CLICKED) ? 15 : 0)), ModItemGroups.COURSE);
+                    .luminance((state) -> state.get(OrichalcumLampBlock.CLICKED) ? 15 : 0)
+                    .sounds(ModSounds.ORICHALCUM_SOUNDS)), ModItemGroups.COURSE);
 
 
     public static final Block TURNIP_CROP = registerBlockWithoutBlockItem("turnip_crop",
