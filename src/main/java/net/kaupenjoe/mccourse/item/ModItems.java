@@ -2,6 +2,7 @@ package net.kaupenjoe.mccourse.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.kaupenjoe.mccourse.MCCourseMod;
+import net.kaupenjoe.mccourse.block.ModBlocks;
 import net.kaupenjoe.mccourse.item.custom.*;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.*;
@@ -69,6 +70,10 @@ public class ModItems {
 
     public static final Item DATA_TABLET = registerItem("data_tablet",
             new DataTabletItem(new FabricItemSettings().group(ModItemGroups.COURSE).maxCount(1)));
+
+    public static final Item TURNIP_SEEDS = registerItem("turnip_seeds",
+            new AliasedBlockItem(ModBlocks.TURNIP_CROP,
+                    new FabricItemSettings().group(ModItemGroups.COURSE)));
 
 
     private static Item registerItem(String name, Item item) {

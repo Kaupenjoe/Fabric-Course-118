@@ -19,6 +19,7 @@
 
   "item.mccourse.orichalcum_horse_armor": "Orichalcum Horse Armor",
   "item.mccourse.data_tablet": "Data Tablet",
+  "item.mccourse.turnip_seeds": "Turnip Seeds",
 
   "block.mccourse.orichalcum_block": "Orichalcum Block",
   "block.mccourse.orichalcum_ore": "Orichalcum Ore",
@@ -35,6 +36,7 @@
   "block.mccourse.cherry_blossom_door": "Cherry Blossom Door",
   "block.mccourse.cherry_blossom_trapdoor": "Cherry Blossom Trapdoor",
   "block.mccourse.orichalcum_lamp": "Orichalcum Lamp",
+  "block.mccourse.turnip_crop": "Turnip Crop",
 
   "itemGroup.mccourse.course": "Course Tab",
 
