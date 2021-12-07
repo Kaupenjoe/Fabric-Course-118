@@ -67,6 +67,9 @@ public class ModItems {
             new HorseArmorItem(15, "orichalcum",
                     new FabricItemSettings().group(ModItemGroups.COURSE)));
 
+    public static final Item DATA_TABLET = registerItem("data_tablet",
+            new DataTabletItem(new FabricItemSettings().group(ModItemGroups.COURSE).maxCount(1)));
+
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(MCCourseMod.MOD_ID, name), item);

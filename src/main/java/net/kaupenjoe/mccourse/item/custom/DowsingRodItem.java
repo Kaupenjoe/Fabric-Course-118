@@ -1,5 +1,7 @@
 package net.kaupenjoe.mccourse.item.custom;
 
+import net.kaupenjoe.mccourse.item.ModItems;
+import net.kaupenjoe.mccourse.util.InventoryUtil;
 import net.kaupenjoe.mccourse.util.ModTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -9,6 +11,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
@@ -35,8 +38,13 @@ public class DowsingRodItem extends Item {
                 Block blockBelow = context.getWorld().getBlockState(positionClicked.down(i)).getBlock();
 
                 if(isValuableBlock(blockBelow)) {
-                    outputValuableCoordinates(positionClicked, player, blockBelow);
+                    outputValuableCoordinates(positionClicked.add(0, -i, 0), player, blockBelow);
                     foundBlock = true;
+
+                    if(InventoryUtil.hasPlayerStackInInventory(player, ModItems.DATA_TABLET)) {
+                        addNbtToDataTablet(player, positionClicked.add(0, -i, 0), blockBelow);
+                    }
+
                     break;
                 }
             }
@@ -50,6 +58,17 @@ public class DowsingRodItem extends Item {
                 (player) -> player.sendToolBreakStatus(player.getActiveHand()));
 
         return super.useOnBlock(context);
+    }
+
+    private void addNbtToDataTablet(PlayerEntity player, BlockPos pos, Block blockBelow) {
+        ItemStack dataTablet =
+                player.getInventory().getStack(InventoryUtil.getFirstInventoryIndex(player, ModItems.DATA_TABLET));
+
+        NbtCompound nbtData = new NbtCompound();
+        nbtData.putString("mccourse.last_ore", "Found " + blockBelow.asItem().getName().getString() + " at (" +
+                pos.getX() + ", "+ pos.getY() + ", "+ pos.getZ() + ")");
+
+        dataTablet.setNbt(nbtData);
     }
 
     @Override
