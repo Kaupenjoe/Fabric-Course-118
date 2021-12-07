@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.kaupenjoe.mccourse.MCCourseMod;
 import net.kaupenjoe.mccourse.block.ModBlocks;
 import net.kaupenjoe.mccourse.item.custom.*;
+import net.kaupenjoe.mccourse.sound.ModSounds;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
@@ -74,6 +75,10 @@ public class ModItems {
     public static final Item TURNIP_SEEDS = registerItem("turnip_seeds",
             new AliasedBlockItem(ModBlocks.TURNIP_CROP,
                     new FabricItemSettings().group(ModItemGroups.COURSE)));
+
+    public static final Item BAR_BRAWL_MUSIC_DISC = registerItem("bar_brawl_music_disc",
+            new ModMusicDiscItem(9, ModSounds.BAR_BRAWL,
+                    new FabricItemSettings().group(ModItemGroups.COURSE).maxCount(1)));
 
 
     private static Item registerItem(String name, Item item) {

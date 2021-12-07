@@ -15,6 +15,8 @@ public class ModSounds {
     public static SoundEvent ORICHALCUM_LAMP_HIT = registerSoundEvent("orichalcum_lamp_hit");
     public static SoundEvent ORICHALCUM_LAMP_FALL = registerSoundEvent("orichalcum_lamp_fall");
 
+    public static SoundEvent BAR_BRAWL = registerSoundEvent("bar_brawl");
+
 
     public static final BlockSoundGroup ORICHALCUM_SOUNDS = new BlockSoundGroup(1f, 1f,
             ModSounds.ORICHALCUM_LAMP_BREAK, ModSounds.ORICHALCUM_LAMP_STEP, ModSounds.ORICHALCUM_LAMP_PLACE,
