@@ -6,6 +6,7 @@ import net.kaupenjoe.mccourse.MCCourseMod;
 import net.kaupenjoe.mccourse.block.custom.*;
 import net.kaupenjoe.mccourse.item.ModItemGroups;
 import net.minecraft.block.*;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -66,6 +67,11 @@ public class ModBlocks {
 
     public static final Block TURNIP_CROP = registerBlockWithoutBlockItem("turnip_crop",
             new ModTurnipBlock(FabricBlockSettings.copy(Blocks.BEETROOTS)));
+
+
+    public static final Block PINK_ROSE = registerBlock("pink_rose",
+            new FlowerBlock(StatusEffects.GLOWING, 8,
+                    FabricBlockSettings.copy(Blocks.PINK_TULIP)), ModItemGroups.COURSE);
 
 
 
