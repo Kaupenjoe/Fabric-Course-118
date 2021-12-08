@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 import net.kaupenjoe.mccourse.block.ModBlocks;
 import net.kaupenjoe.mccourse.enchantment.ModEnchantments;
 import net.kaupenjoe.mccourse.item.ModItems;
+import net.kaupenjoe.mccourse.util.ModLootTableModifiers;
 import net.kaupenjoe.mccourse.util.ModRegistries;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -19,6 +20,7 @@ public class MCCourseMod implements ModInitializer {
 		ModBlocks.registerModBlocks();
 
 		ModEnchantments.registerModEnchantments();
+		ModLootTableModifiers.modifyLootTables();
 
 		ModRegistries.registerModStuffs();
 	}
