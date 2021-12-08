@@ -3,6 +3,7 @@ package net.kaupenjoe.mccourse.item;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.kaupenjoe.mccourse.MCCourseMod;
 import net.kaupenjoe.mccourse.block.ModBlocks;
+import net.kaupenjoe.mccourse.fluid.ModFluids;
 import net.kaupenjoe.mccourse.item.custom.*;
 import net.kaupenjoe.mccourse.sound.ModSounds;
 import net.minecraft.entity.EquipmentSlot;
@@ -86,6 +87,9 @@ public class ModItems {
 
     public static final Item ORICHALCUM_BOW = registerItem("orichalcum_bow",
             new BowItem(new FabricItemSettings().group(ModItemGroups.COURSE).maxCount(1)));
+
+    public static final Item HONEY_BUCKET = registerItem("honey_bucket",
+            new BucketItem(ModFluids.HONEY_STILL, new FabricItemSettings().group(ModItemGroups.COURSE).maxCount(1)));
 
 
     private static Item registerItem(String name, Item item) {
