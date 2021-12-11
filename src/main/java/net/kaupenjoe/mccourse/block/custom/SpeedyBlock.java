@@ -8,12 +8,15 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.text.LiteralText;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+
+import java.util.Random;
 
 public class SpeedyBlock extends Block {
     public SpeedyBlock(Settings settings) {
@@ -35,6 +38,35 @@ public class SpeedyBlock extends Block {
         }
 
         return ActionResult.PASS;
+    }
+
+    @Override
+    public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
+        float chance = 0.35f;
+
+        if(chance < random.nextFloat()) {
+            world.addParticle(ParticleTypes.SMOKE, pos.getX() + random.nextDouble(),
+                    pos.getY() + 0.5D, pos.getZ() + random.nextDouble(),
+                    0d, 0.015d + random.nextDouble(0.075d), 0d);
+        }
+
+        if(chance < random.nextFloat()) {
+            world.addParticle(ParticleTypes.SMOKE, pos.getX() + random.nextDouble(),
+                    pos.getY() + 0.5D, pos.getZ() + random.nextDouble(),
+                    0d, 0.015d + random.nextDouble(0.075d), 0d);
+        }
+
+        if(chance < random.nextFloat()) {
+            world.addParticle(ParticleTypes.SMOKE, pos.getX() + random.nextDouble(),
+                    pos.getY() + 0.5D, pos.getZ() + random.nextDouble(),
+                    0d, 0.015d + random.nextDouble(0.075d), 0d);
+        }
+
+        if(chance < random.nextFloat()) {
+            world.addParticle(ParticleTypes.SMOKE, pos.getX() + random.nextDouble(),
+                    pos.getY() + 0.5D, pos.getZ() + random.nextDouble(),
+                    0d, 0.015d + random.nextDouble(0.075d), 0d);
+        }
     }
 
     @Override
