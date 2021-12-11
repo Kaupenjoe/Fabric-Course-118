@@ -9,6 +9,7 @@ import net.kaupenjoe.mccourse.painting.ModPaintings;
 import net.kaupenjoe.mccourse.recipe.ModRecipes;
 import net.kaupenjoe.mccourse.util.ModLootTableModifiers;
 import net.kaupenjoe.mccourse.util.ModRegistries;
+import net.kaupenjoe.mccourse.world.feature.ModConfiguredFeatures;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -19,6 +20,8 @@ public class MCCourseMod implements ModInitializer {
 	// A Comment
 	@Override
 	public void onInitialize() {
+		ModConfiguredFeatures.registerConfiguredFeatures();
+
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 

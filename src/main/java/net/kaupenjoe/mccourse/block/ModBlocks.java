@@ -7,6 +7,7 @@ import net.kaupenjoe.mccourse.block.custom.*;
 import net.kaupenjoe.mccourse.fluid.ModFluids;
 import net.kaupenjoe.mccourse.item.ModItemGroups;
 import net.kaupenjoe.mccourse.sound.ModSounds;
+import net.kaupenjoe.mccourse.world.feature.tree.CherryBlossomSaplingGenerator;
 import net.minecraft.block.*;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
@@ -108,6 +109,13 @@ public class ModBlocks {
     public static final Block CHERRY_BLOSSOM_SIGN_BLOCK = registerBlockWithoutBlockItem("cherry_blossom_sign",
             new SignBlock(FabricBlockSettings.copy(Blocks.OAK_PLANKS), ModSignTypes.CHERRY_BLOSSOM));
 
+
+    public static final Block CHERRY_BLOSSOM_LEAVES = registerBlock("cherry_blossom_leaves",
+            new LeavesBlock(FabricBlockSettings.copy(Blocks.OAK_LEAVES)), ModItemGroups.COURSE);
+
+    public static final Block CHERRY_BLOSSOM_SAPLING = registerBlock("cherry_blossom_sapling",
+            new ModSaplingBlock(new CherryBlossomSaplingGenerator(),
+                    FabricBlockSettings.copy(Blocks.OAK_SAPLING)), ModItemGroups.COURSE);
 
 
     private static Block registerBlockWithoutBlockItem(String name, Block block) {
