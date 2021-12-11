@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "mccourse:orichalcum_ingot"
+    },
+    "title": "MCCourse Mod",
+    "description": "The Power lies in the Orichalcum!",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "background": "mccourse:textures/block/orichalcum_block.png"
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mccourse:orichalcum_ingot"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
