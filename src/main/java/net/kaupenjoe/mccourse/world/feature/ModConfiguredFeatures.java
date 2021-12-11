@@ -36,6 +36,13 @@ public class ModConfiguredFeatures {
                     createRandomPatchFeatureConfig(BlockStateProvider.of(ModBlocks.PINK_ROSE), 64)));
 
 
+    public static final List<OreFeatureConfig.Target> OVERWORLD_ORICHALCUM_ORES = List.of(
+            OreFeatureConfig.createTarget(OreConfiguredFeatures.STONE_ORE_REPLACEABLES, ModBlocks.ORICHALCUM_ORE.getDefaultState()),
+            OreFeatureConfig.createTarget(OreConfiguredFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_ORICHALCUM_ORE.getDefaultState()));
+
+    public static final ConfiguredFeature<?, ?> ORICHALCUM_ORE = register("orichalcum_ore",
+            Feature.ORE.configure(new OreFeatureConfig(OVERWORLD_ORICHALCUM_ORES, 9)));
+
 
 
     public static <FC extends FeatureConfig> ConfiguredFeature<FC, ?> register(String name, ConfiguredFeature<FC, ?> configuredFeature) {
