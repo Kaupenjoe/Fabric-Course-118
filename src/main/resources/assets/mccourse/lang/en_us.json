@@ -43,6 +43,13 @@
   "block.mccourse.pink_rose": "Pink Rose",
   "block.mccourse.potted_pink_rose": "Potted Pink Rose",
   "block.mccourse.orichalcum_blaster": "Orichalcum Blaster",
+
+  "block.mccourse.cherry_blossom_log": "Cherry Blossom Log",
+  "block.mccourse.cherry_blossom_wood": "Cherry Blossom Wood",
+  "block.mccourse.stripped_cherry_blossom_log": "Stripped Cherry Blossom Log",
+  "block.mccourse.stripped_cherry_blossom_wood": "Stripped Cherry Blossom Wood",
+  "block.mccourse.cherry_blossom_planks": "Cherry Blossom Planks",
+
   "item.mccourse.bar_brawl_music_disc": "Bar Brawl Music Disc",
   "item.mccourse.bar_brawl_music_disc.desc": "Bryan Tech - Bar Brawl (CC0)",
 

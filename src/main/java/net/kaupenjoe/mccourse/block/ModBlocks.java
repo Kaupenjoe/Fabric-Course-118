@@ -88,6 +88,21 @@ public class ModBlocks {
                     .noCollision().nonOpaque().dropsNothing()));
 
 
+    public static final Block CHERRY_BLOSSOM_LOG = registerBlock("cherry_blossom_log",
+            new PillarBlock(FabricBlockSettings.copy(Blocks.OAK_LOG)), ModItemGroups.COURSE);
+    public static final Block CHERRY_BLOSSOM_WOOD = registerBlock("cherry_blossom_wood",
+            new PillarBlock(FabricBlockSettings.copy(Blocks.OAK_WOOD)), ModItemGroups.COURSE);
+
+    public static final Block STRIPPED_CHERRY_BLOSSOM_LOG = registerBlock("stripped_cherry_blossom_log",
+            new PillarBlock(FabricBlockSettings.copy(Blocks.STRIPPED_OAK_LOG)), ModItemGroups.COURSE);
+    public static final Block STRIPPED_CHERRY_BLOSSOM_WOOD = registerBlock("stripped_cherry_blossom_wood",
+            new PillarBlock(FabricBlockSettings.copy(Blocks.STRIPPED_OAK_WOOD)), ModItemGroups.COURSE);
+
+    public static final Block CHERRY_BLOSSOM_PLANKS = registerBlock("cherry_blossom_planks",
+            new Block(FabricBlockSettings.copy(Blocks.OAK_PLANKS)), ModItemGroups.COURSE);
+
+
+
     private static Block registerBlockWithoutBlockItem(String name, Block block) {
         return Registry.register(Registry.BLOCK, new Identifier(MCCourseMod.MOD_ID, name), block);
     }
