@@ -6,6 +6,7 @@ import net.kaupenjoe.mccourse.block.entity.ModBlockEntities;
 import net.kaupenjoe.mccourse.enchantment.ModEnchantments;
 import net.kaupenjoe.mccourse.item.ModItems;
 import net.kaupenjoe.mccourse.painting.ModPaintings;
+import net.kaupenjoe.mccourse.recipe.ModRecipes;
 import net.kaupenjoe.mccourse.util.ModLootTableModifiers;
 import net.kaupenjoe.mccourse.util.ModRegistries;
 import org.apache.logging.log4j.LogManager;
@@ -25,6 +26,8 @@ public class MCCourseMod implements ModInitializer {
 
 		ModEnchantments.registerModEnchantments();
 		ModLootTableModifiers.modifyLootTables();
+
+		ModRecipes.register();
 
 		ModRegistries.registerModStuffs();
 		ModPaintings.registerPaintings();

@@ -1,0 +1,14 @@
+{
+  "type": "mccourse:orichalcum_blaster",
+  "ingredients": [
+    {
+      "item": "minecraft:golden_pickaxe"
+    },
+    {
+      "item": "mccourse:orichalcum_ingot"
+    }
+  ],
+  "output": {
+    "item": "mccourse:orichalcum_pickaxe"
+  }
+}
