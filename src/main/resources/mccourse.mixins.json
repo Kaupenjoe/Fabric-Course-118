@@ -4,7 +4,9 @@
   "package": "net.kaupenjoe.mccourse.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
-    "ModEntityDataSaver"
+    "ModEntityDataSaver",
+    "SignTypeAccessor",
+    "BlockEntityTypeMixin"
   ],
   "client": [
     "ExampleMixin"
