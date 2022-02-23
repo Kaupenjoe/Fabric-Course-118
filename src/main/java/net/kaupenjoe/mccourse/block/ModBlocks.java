@@ -120,6 +120,10 @@ public class ModBlocks {
                     FabricBlockSettings.copy(Blocks.OAK_SAPLING)), ModItemGroups.COURSE);
 
 
+    public static final Block WINTER_WINDOW = registerBlock("winter_window",
+            new GlassBlock(FabricBlockSettings.copy(Blocks.GLASS).nonOpaque().strength(3.0f)), ModItemGroups.COURSE);
+
+
     private static Block registerBlockWithoutBlockItem(String name, Block block) {
         return Registry.register(Registry.BLOCK, new Identifier(MCCourseMod.MOD_ID, name), block);
     }
