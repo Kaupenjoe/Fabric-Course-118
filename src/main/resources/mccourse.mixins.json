@@ -9,7 +9,8 @@
     "BlockEntityTypeMixin"
   ],
   "client": [
-    "ExampleMixin"
+    "ExampleMixin",
+    "ScreenMixin"
   ],
   "injectors": {
     "defaultRequire": 1
