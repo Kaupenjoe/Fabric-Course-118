@@ -97,6 +97,10 @@ public class ModItems {
                     ModBlocks.CHERRY_BLOSSOM_SIGN_BLOCK, ModBlocks.CHERRY_BLOSSOM_WALL_SIGN_BLOCK));
 
 
+    public static final Item MAGIC_ORICHALCUM_DUST = registerItem("magic_orichalcum_dust",
+            new Item(new FabricItemSettings().group(ModItemGroups.COURSE)));
+
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(MCCourseMod.MOD_ID, name), item);
     }
