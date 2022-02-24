@@ -2,12 +2,15 @@ package net.kaupenjoe.mccourse.util;
 
 import net.fabricmc.fabric.api.command.v1.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.kaupenjoe.mccourse.MCCourseMod;
 import net.kaupenjoe.mccourse.block.ModBlocks;
 import net.kaupenjoe.mccourse.command.ReturnHomeCommand;
 import net.kaupenjoe.mccourse.command.SetHomeCommand;
+import net.kaupenjoe.mccourse.entity.ModEntities;
+import net.kaupenjoe.mccourse.entity.custom.RaccoonEntity;
 import net.kaupenjoe.mccourse.event.ModPlayerEventCopyFrom;
 import net.kaupenjoe.mccourse.item.ModItems;
 import net.minecraft.block.ComposterBlock;
@@ -19,6 +22,7 @@ public class ModRegistries {
         registerCommands();
         registerEvents();
         registerStrippables();
+        registerAttributes();
     }
 
     private static void registerFuels() {
@@ -46,5 +50,9 @@ public class ModRegistries {
     private static void registerStrippables() {
         StrippableBlockRegistry.register(ModBlocks.CHERRY_BLOSSOM_LOG, ModBlocks.STRIPPED_CHERRY_BLOSSOM_LOG);
         StrippableBlockRegistry.register(ModBlocks.CHERRY_BLOSSOM_WOOD, ModBlocks.STRIPPED_CHERRY_BLOSSOM_WOOD);
+    }
+
+    private static void registerAttributes() {
+        FabricDefaultAttributeRegistry.register(ModEntities.RACCOON, RaccoonEntity.setAttributes());
     }
 }

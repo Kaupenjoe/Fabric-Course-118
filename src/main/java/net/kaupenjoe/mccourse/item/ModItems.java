@@ -3,6 +3,7 @@ package net.kaupenjoe.mccourse.item;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.kaupenjoe.mccourse.MCCourseMod;
 import net.kaupenjoe.mccourse.block.ModBlocks;
+import net.kaupenjoe.mccourse.entity.ModEntities;
 import net.kaupenjoe.mccourse.fluid.ModFluids;
 import net.kaupenjoe.mccourse.item.custom.*;
 import net.kaupenjoe.mccourse.sound.ModSounds;
@@ -99,6 +100,11 @@ public class ModItems {
 
     public static final Item MAGIC_ORICHALCUM_DUST = registerItem("magic_orichalcum_dust",
             new Item(new FabricItemSettings().group(ModItemGroups.COURSE)));
+
+
+    public static final Item RACCOON_SPAWN_EGG = registerItem("raccoon_spawn_egg",
+            new SpawnEggItem(ModEntities.RACCOON,0x948e8d, 0x3b3635,
+                    new FabricItemSettings().group(ModItemGroups.COURSE)));
 
 
     private static Item registerItem(String name, Item item) {
