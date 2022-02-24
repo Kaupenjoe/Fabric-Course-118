@@ -3,6 +3,7 @@ package net.kaupenjoe.mccourse;
 import net.fabricmc.api.ModInitializer;
 import net.kaupenjoe.mccourse.block.ModBlocks;
 import net.kaupenjoe.mccourse.block.entity.ModBlockEntities;
+import net.kaupenjoe.mccourse.config.ModConfigs;
 import net.kaupenjoe.mccourse.enchantment.ModEnchantments;
 import net.kaupenjoe.mccourse.item.ModItems;
 import net.kaupenjoe.mccourse.painting.ModPaintings;
@@ -21,6 +22,8 @@ public class MCCourseMod implements ModInitializer {
 	// A Comment
 	@Override
 	public void onInitialize() {
+		ModConfigs.registerConfigs();
+
 		ModConfiguredFeatures.registerConfiguredFeatures();
 
 		ModItems.registerModItems();
