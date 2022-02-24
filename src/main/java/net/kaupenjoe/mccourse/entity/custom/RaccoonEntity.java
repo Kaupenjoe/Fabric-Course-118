@@ -16,6 +16,10 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib3.core.IAnimatable;
+import software.bernie.geckolib3.core.PlayState;
+import software.bernie.geckolib3.core.builder.AnimationBuilder;
+import software.bernie.geckolib3.core.controller.AnimationController;
+import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
@@ -71,11 +75,23 @@ public class RaccoonEntity extends AnimalEntity implements IAnimatable {
 
     @Override
     public void registerControllers(AnimationData animationData) {
-
+        animationData.addAnimationController(new AnimationController(this, "controller",
+                0, this::predicate));
     }
 
     @Override
     public AnimationFactory getFactory() {
         return factory;
+    }
+
+    // ANIMATIONS
+    private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
+        if (event.isMoving()) {
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.raccoon.walk", true));
+            return PlayState.CONTINUE;
+        }
+
+        event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.raccoon.idle", true));
+        return PlayState.CONTINUE;
     }
 }
