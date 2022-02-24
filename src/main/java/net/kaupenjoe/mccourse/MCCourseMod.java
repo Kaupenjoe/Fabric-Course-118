@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 import net.kaupenjoe.mccourse.block.ModBlocks;
 import net.kaupenjoe.mccourse.block.entity.ModBlockEntities;
 import net.kaupenjoe.mccourse.config.ModConfigs;
+import net.kaupenjoe.mccourse.effect.ModEffects;
 import net.kaupenjoe.mccourse.enchantment.ModEnchantments;
 import net.kaupenjoe.mccourse.item.ModItems;
 import net.kaupenjoe.mccourse.painting.ModPaintings;
@@ -40,5 +41,7 @@ public class MCCourseMod implements ModInitializer {
 		ModPaintings.registerPaintings();
 
 		ModWorldGen.generateModWorldGen();
+
+		ModEffects.registerEffects();
 	}
 }
