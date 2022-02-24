@@ -13,7 +13,7 @@ public class RaccoonModel extends AnimatedGeoModel<RaccoonEntity> {
 
     @Override
     public Identifier getTextureLocation(RaccoonEntity entity) {
-        return new Identifier(MCCourseMod.MOD_ID, "textures/entity/raccoon/raccoon.png");
+        return RaccoonRenderer.LOCATION_BY_VARIANT.get(entity.getVariant());
     }
 
     @Override

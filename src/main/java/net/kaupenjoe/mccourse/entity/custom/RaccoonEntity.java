@@ -1,18 +1,28 @@
 package net.kaupenjoe.mccourse.entity.custom;
 
+import net.kaupenjoe.mccourse.entity.variants.RaccoonVariant;
 import net.minecraft.block.BlockState;
+import net.minecraft.entity.EntityData;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.data.DataTracker;
+import net.minecraft.entity.data.TrackedData;
+import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.util.Util;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.LocalDifficulty;
+import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib3.core.IAnimatable;
@@ -25,6 +35,9 @@ import software.bernie.geckolib3.core.manager.AnimationFactory;
 
 public class RaccoonEntity extends AnimalEntity implements IAnimatable {
     private AnimationFactory factory = new AnimationFactory(this);
+
+    private static final TrackedData<Integer> DATA_ID_TYPE_VARIANT =
+            DataTracker.registerData(RaccoonEntity.class, TrackedDataHandlerRegistry.INTEGER);
 
     public RaccoonEntity(EntityType<? extends AnimalEntity> entityType, World world) {
         super(entityType, world);
@@ -93,5 +106,46 @@ public class RaccoonEntity extends AnimalEntity implements IAnimatable {
 
         event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.raccoon.idle", true));
         return PlayState.CONTINUE;
+    }
+
+
+    /* VARIANTS */
+    @Override
+    public EntityData initialize(ServerWorldAccess world, LocalDifficulty difficulty,
+                                 SpawnReason spawnReason, @Nullable EntityData entityData,
+                                 @Nullable NbtCompound entityNbt) {
+        RaccoonVariant variant = Util.getRandom(RaccoonVariant.values(), this.random);
+        setVariant(variant);
+        return super.initialize(world, difficulty, spawnReason, entityData, entityNbt);
+    }
+
+    @Override
+    public void writeCustomDataToNbt(NbtCompound tag) {
+        super.writeCustomDataToNbt(tag);
+        tag.putInt("Variant", this.getTypeVariant());
+    }
+
+    public RaccoonVariant getVariant() {
+        return RaccoonVariant.byId(this.getTypeVariant() & 255);
+    }
+
+    private int getTypeVariant() {
+        return this.dataTracker.get(DATA_ID_TYPE_VARIANT);
+    }
+
+    @Override
+    public void readCustomDataFromNbt(NbtCompound p_21815_) {
+        super.readCustomDataFromNbt(p_21815_);
+        this.dataTracker.set(DATA_ID_TYPE_VARIANT, p_21815_.getInt("Variant"));
+    }
+
+    private void setVariant(RaccoonVariant variant) {
+        this.dataTracker.set(DATA_ID_TYPE_VARIANT, variant.getId() & 255);
+    }
+
+    @Override
+    protected void initDataTracker() {
+        super.initDataTracker();
+        this.dataTracker.startTracking(DATA_ID_TYPE_VARIANT, 0);
     }
 }
