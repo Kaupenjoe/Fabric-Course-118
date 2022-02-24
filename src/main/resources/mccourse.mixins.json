@@ -6,7 +6,8 @@
   "mixins": [
     "ModEntityDataSaver",
     "SignTypeAccessor",
-    "BlockEntityTypeMixin"
+    "BlockEntityTypeMixin",
+    "BrewingRecipeRegistryMixin"
   ],
   "client": [
     "ExampleMixin",

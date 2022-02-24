@@ -26,6 +26,11 @@
 
   "item.mccourse.magic_orichalcum_dust": "Magic Orichalcum Dust",
 
+  "item.minecraft.potion.effect.freeze_potion": "Freeze Potion",
+  "item.minecraft.splash_potion.effect.freeze_potion": "Splash Potion of Freeze",
+  "item.minecraft.lingering_potion.effect.freeze_potion": "Lingering Potion of Freeze",
+
+
   "block.mccourse.orichalcum_block": "Orichalcum Block",
   "block.mccourse.orichalcum_ore": "Orichalcum Ore",
   "block.mccourse.raw_orichalcum_block": "Raw Orichalcum Block",
@@ -66,5 +71,6 @@
   "item.mccourse.dowsing_rode.tooltip.shift": "Right Click to find valuables",
   "item.mccourse.dowsing_rode.tooltip": "Press §eSHIFT§r for more Information",
 
-  "enchantment.mccourse.lightning_striker": "Lightning Striker"
+  "enchantment.mccourse.lightning_striker": "Lightning Striker",
+  "effect.mccourse.freeze": "Freeze"
 }

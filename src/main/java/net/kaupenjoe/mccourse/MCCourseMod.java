@@ -8,6 +8,7 @@ import net.kaupenjoe.mccourse.effect.ModEffects;
 import net.kaupenjoe.mccourse.enchantment.ModEnchantments;
 import net.kaupenjoe.mccourse.item.ModItems;
 import net.kaupenjoe.mccourse.painting.ModPaintings;
+import net.kaupenjoe.mccourse.potion.ModPotions;
 import net.kaupenjoe.mccourse.recipe.ModRecipes;
 import net.kaupenjoe.mccourse.util.ModLootTableModifiers;
 import net.kaupenjoe.mccourse.util.ModRegistries;
@@ -43,5 +44,6 @@ public class MCCourseMod implements ModInitializer {
 		ModWorldGen.generateModWorldGen();
 
 		ModEffects.registerEffects();
+		ModPotions.registerPotions();
 	}
 }
