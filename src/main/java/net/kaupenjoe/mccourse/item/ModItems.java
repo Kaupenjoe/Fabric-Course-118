@@ -106,6 +106,10 @@ public class ModItems {
             new SpawnEggItem(ModEntities.RACCOON,0x948e8d, 0x3b3635,
                     new FabricItemSettings().group(ModItemGroups.COURSE)));
 
+    public static final Item TIGER_SPAWN_EGG = registerItem("tiger_spawn_egg",
+            new SpawnEggItem(ModEntities.TIGER,0xfcb603, 0x242321,
+                    new FabricItemSettings().group(ModItemGroups.COURSE)));
+
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(MCCourseMod.MOD_ID, name), item);

@@ -11,6 +11,7 @@ import net.kaupenjoe.mccourse.command.ReturnHomeCommand;
 import net.kaupenjoe.mccourse.command.SetHomeCommand;
 import net.kaupenjoe.mccourse.entity.ModEntities;
 import net.kaupenjoe.mccourse.entity.custom.RaccoonEntity;
+import net.kaupenjoe.mccourse.entity.custom.TigerEntity;
 import net.kaupenjoe.mccourse.event.ModPlayerEventCopyFrom;
 import net.kaupenjoe.mccourse.item.ModItems;
 import net.minecraft.block.ComposterBlock;
@@ -54,5 +55,6 @@ public class ModRegistries {
 
     private static void registerAttributes() {
         FabricDefaultAttributeRegistry.register(ModEntities.RACCOON, RaccoonEntity.setAttributes());
+        FabricDefaultAttributeRegistry.register(ModEntities.TIGER, TigerEntity.setAttributes());
     }
 }

@@ -10,6 +10,7 @@ import net.fabricmc.fabric.api.client.screenhandler.v1.ScreenRegistry;
 import net.kaupenjoe.mccourse.block.ModBlocks;
 import net.kaupenjoe.mccourse.entity.ModEntities;
 import net.kaupenjoe.mccourse.entity.client.RaccoonRenderer;
+import net.kaupenjoe.mccourse.entity.client.TigerRenderer;
 import net.kaupenjoe.mccourse.event.ReplaceTitleScreenEvent;
 import net.kaupenjoe.mccourse.fluid.ModFluids;
 import net.kaupenjoe.mccourse.screen.ModScreenHandlers;
@@ -51,6 +52,7 @@ public class MCCourseClient implements ClientModInitializer {
         ScreenEvents.BEFORE_INIT.register(new ReplaceTitleScreenEvent());
 
         EntityRendererRegistry.register(ModEntities.RACCOON, RaccoonRenderer::new);
+        EntityRendererRegistry.register(ModEntities.TIGER, TigerRenderer::new);
 
     }
 }
