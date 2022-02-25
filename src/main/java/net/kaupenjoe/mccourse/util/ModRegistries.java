@@ -3,6 +3,7 @@ package net.kaupenjoe.mccourse.util;
 import net.fabricmc.fabric.api.command.v1.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.kaupenjoe.mccourse.MCCourseMod;
@@ -15,6 +16,10 @@ import net.kaupenjoe.mccourse.entity.custom.TigerEntity;
 import net.kaupenjoe.mccourse.event.ModPlayerEventCopyFrom;
 import net.kaupenjoe.mccourse.item.ModItems;
 import net.minecraft.block.ComposterBlock;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
+import net.minecraft.village.TradeOffer;
+import net.minecraft.village.VillagerProfession;
 
 public class ModRegistries {
     public static void registerModStuffs() {
@@ -24,6 +29,7 @@ public class ModRegistries {
         registerEvents();
         registerStrippables();
         registerAttributes();
+        registerCustomTrades();
     }
 
     private static void registerFuels() {
@@ -56,5 +62,23 @@ public class ModRegistries {
     private static void registerAttributes() {
         FabricDefaultAttributeRegistry.register(ModEntities.RACCOON, RaccoonEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(ModEntities.TIGER, TigerEntity.setAttributes());
+    }
+
+    private static void registerCustomTrades() {
+        TradeOfferHelper.registerVillagerOffers(VillagerProfession.FARMER, 1,
+                factories -> {
+                    factories.add((entity, random) -> new TradeOffer(
+                            new ItemStack(Items.EMERALD, 2),
+                            new ItemStack(ModItems.TURNIP, 12),
+                            6,2,0.02f));
+                });
+
+        TradeOfferHelper.registerVillagerOffers(VillagerProfession.TOOLSMITH, 3,
+                factories -> {
+                    factories.add((entity, random) -> new TradeOffer(
+                            new ItemStack(Items.EMERALD, 6),
+                            new ItemStack(ModItems.ORICHALCUM_PAXEL, 1),
+                            12,3,0.08f));
+                });
     }
 }
