@@ -13,7 +13,10 @@ import net.kaupenjoe.mccourse.recipe.ModRecipes;
 import net.kaupenjoe.mccourse.util.ModLootTableModifiers;
 import net.kaupenjoe.mccourse.util.ModRegistries;
 import net.kaupenjoe.mccourse.world.feature.ModConfiguredFeatures;
+import net.kaupenjoe.mccourse.world.gen.ModStructureGeneration;
 import net.kaupenjoe.mccourse.world.gen.ModWorldGen;
+import net.kaupenjoe.mccourse.world.structure.ModConfiguredStructures;
+import net.kaupenjoe.mccourse.world.structure.ModStructures;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -45,5 +48,9 @@ public class MCCourseMod implements ModInitializer {
 
 		ModEffects.registerEffects();
 		ModPotions.registerPotions();
+
+		ModStructures.setupAndRegisterStructureFeatures();
+		ModConfiguredStructures.registerConfiguredStructures();
+		ModStructureGeneration.addStructureSpawningToDimensionsAndBiomes();
 	}
 }
