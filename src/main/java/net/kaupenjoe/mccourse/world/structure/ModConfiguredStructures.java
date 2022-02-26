@@ -17,6 +17,9 @@ public class ModConfiguredStructures {
 
     public static ConfiguredStructureFeature<?, ?> CONFIGURED_KAUPEN_HOUSE = ModStructures.KAUPEN_HOUSE
             .configure(new StructurePoolFeatureConfig(() -> PlainsVillageData.STRUCTURE_POOLS, 0));
+
+    public static ConfiguredStructureFeature<?, ?> CONFIGURED_STORAGE_PLATFORM = ModStructures.STORAGE_PLATFORM
+            .configure(new StructurePoolFeatureConfig(() -> PlainsVillageData.STRUCTURE_POOLS, 0));
     // Dummy StructurePoolFeatureConfig values for now. We will modify the pool at runtime since we cannot get json pool files here at mod init.
     // You can create and register your pools in code, pass in the code create pool here, and delete both newConfig and newContext in RunDownHouseStructure's createPiecesGenerator.
     // Note: StructurePoolFeatureConfig only takes 0 - 7 size so that's another reason why we are going to bypass that "codec" by changing size at runtime to get higher sizes.
@@ -33,5 +36,6 @@ public class ModConfiguredStructures {
         Registry<ConfiguredStructureFeature<?, ?>> registry = BuiltinRegistries.CONFIGURED_STRUCTURE_FEATURE;
         Registry.register(registry, new Identifier(MCCourseMod.MOD_ID, "configured_run_down_house"), CONFIGURED_RUN_DOWN_HOUSE);
         Registry.register(registry, new Identifier(MCCourseMod.MOD_ID, "configured_kaupen_house"), CONFIGURED_KAUPEN_HOUSE);
+        Registry.register(registry, new Identifier(MCCourseMod.MOD_ID, "configured_storage_platform"), CONFIGURED_STORAGE_PLATFORM);
     }
 }

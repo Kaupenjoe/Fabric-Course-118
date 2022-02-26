@@ -60,5 +60,25 @@ public class ModStructureGeneration {
                         Registry.CONFIGURED_STRUCTURE_FEATURE_KEY,
                         BuiltinRegistries.CONFIGURED_STRUCTURE_FEATURE.getId(ModConfiguredStructures.CONFIGURED_KAUPEN_HOUSE))
         );
+
+        BiomeModifications.addStructure(
+                // Add our structure to all biomes that have any of these biome categories. This includes modded biomes.
+                // You can filter to certain biomes based on stuff like temperature, scale, precipitation, mod id, etc.
+                // See BiomeSelectors's methods for more options or write your own by doing `(context) -> context.whatever() == condition`
+                BiomeSelectors.categories(
+                        Biome.Category.DESERT,
+                        Biome.Category.EXTREME_HILLS,
+                        Biome.Category.FOREST,
+                        Biome.Category.ICY,
+                        Biome.Category.JUNGLE,
+                        Biome.Category.PLAINS,
+                        Biome.Category.SAVANNA,
+                        Biome.Category.TAIGA),
+                // The registry key of our ConfiguredStructure so BiomeModification API can grab it
+                // later to tell the game which biomes that your structure can spawn within.
+                RegistryKey.of(
+                        Registry.CONFIGURED_STRUCTURE_FEATURE_KEY,
+                        BuiltinRegistries.CONFIGURED_STRUCTURE_FEATURE.getId(ModConfiguredStructures.CONFIGURED_STORAGE_PLATFORM))
+        );
     }
 }
