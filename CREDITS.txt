@@ -17,7 +17,3 @@ https://www.fiverr.com/yoruniii/make-and-animate-3d-model-in-blockbench
 
 Raccoon by Yoruniii (https://creativecommons.org/licenses/by-sa/4.0/):
 https://www.fiverr.com/yoruniii/make-and-animate-3d-model-in-blockbench
-
-Structure Code & JSON Files all from TelepathicGrunt
-(Under MIT-License: https://github.com/TelepathicGrunt/StructureTutorialMod/blob/1.18.2-Forge-Jigsaw/LICENSE.txt):
-https://github.com/TelepathicGrunt/StructureTutorialMod
