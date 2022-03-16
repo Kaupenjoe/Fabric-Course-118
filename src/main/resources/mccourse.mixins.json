@@ -7,8 +7,7 @@
     "ModEntityDataSaver",
     "SignTypeAccessor",
     "BlockEntityTypeMixin",
-    "BrewingRecipeRegistryMixin",
-    "NoiseChunkGeneratorMixin"
+    "BrewingRecipeRegistryMixin"
   ],
   "client": [
     "ExampleMixin",
