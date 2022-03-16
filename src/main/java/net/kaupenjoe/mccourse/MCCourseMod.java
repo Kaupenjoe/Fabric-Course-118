@@ -14,6 +14,7 @@ import net.kaupenjoe.mccourse.util.ModLootTableModifiers;
 import net.kaupenjoe.mccourse.util.ModRegistries;
 import net.kaupenjoe.mccourse.world.feature.ModConfiguredFeatures;
 import net.kaupenjoe.mccourse.world.gen.ModWorldGen;
+import net.kaupenjoe.mccourse.world.structures.ModStructures;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -45,5 +46,7 @@ public class MCCourseMod implements ModInitializer {
 
 		ModEffects.registerEffects();
 		ModPotions.registerPotions();
+
+		ModStructures.registerStructureFeatures();
 	}
 }
