@@ -5,6 +5,7 @@ import net.kaupenjoe.mccourse.sound.ModSounds;
 import net.kaupenjoe.mccourse.util.InventoryUtil;
 import net.kaupenjoe.mccourse.util.ModTags;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
@@ -55,9 +56,10 @@ public class DowsingRodItem extends Item {
             boolean foundBlock = false;
 
             for(int i = 0; i <= positionClicked.getY(); i++) {
-                Block blockBelow = context.getWorld().getBlockState(positionClicked.down(i)).getBlock();
+                BlockState stateBelow = context.getWorld().getBlockState(positionClicked.down(i));
+                Block blockBelow = stateBelow.getBlock();
 
-                if(isValuableBlock(blockBelow)) {
+                if(isValuableBlock(stateBelow)) {
                     outputValuableCoordinates(positionClicked.add(0, -i, 0), player, blockBelow);
                     foundBlock = true;
 
@@ -108,7 +110,7 @@ public class DowsingRodItem extends Item {
                 "(" + blockPos.getX() + ", " + blockPos.getY() + "," + blockPos.getZ() + ")"), false);
     }
 
-    private boolean isValuableBlock(Block block) {
-        return ModTags.Blocks.DOWSING_ROD_DETECTABLE_BLOCKS.contains(block);
+    private boolean isValuableBlock(BlockState block) {
+        return block.isIn(ModTags.Blocks.DOWSING_ROD_DETECTABLE_BLOCKS);
     }
 }

@@ -9,6 +9,6 @@ import net.minecraft.world.gen.GenerationStep;
 public class ModFlowerGeneration {
     public static void generateFlowers() {
         BiomeModifications.addFeature(BiomeSelectors.categories(Biome.Category.PLAINS),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.PINK_ROSE_PLACED_KEY);
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.PINK_ROSE_PLACED.getKey().get());
     }
 }
