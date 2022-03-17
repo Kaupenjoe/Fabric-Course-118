@@ -17,6 +17,7 @@ import net.kaupenjoe.mccourse.world.gen.ModWorldGen;
 import net.kaupenjoe.mccourse.world.structures.ModStructures;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import software.bernie.geckolib3.GeckoLib;
 
 public class MCCourseMod implements ModInitializer {
 	public static final String MOD_ID = "mccourse";
@@ -48,5 +49,7 @@ public class MCCourseMod implements ModInitializer {
 		ModPotions.registerPotions();
 
 		ModStructures.registerStructureFeatures();
+
+		GeckoLib.initialize();
 	}
 }

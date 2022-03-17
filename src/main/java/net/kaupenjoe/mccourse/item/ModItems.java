@@ -55,16 +55,16 @@ public class ModItems {
 
 
     public static final Item ORICHALCUM_HELMET = registerItem("orichalcum_helmet",
-            new ModArmorItem(ModArmorMaterials.ORICHALCUM, EquipmentSlot.HEAD,
+            new OrichalcumArmorItem(ModArmorMaterials.ORICHALCUM, EquipmentSlot.HEAD,
                     new FabricItemSettings().group(ModItemGroups.COURSE)));
     public static final Item ORICHALCUM_CHESTPLATE = registerItem("orichalcum_chestplate",
-            new ArmorItem(ModArmorMaterials.ORICHALCUM, EquipmentSlot.CHEST,
+            new OrichalcumArmorItem(ModArmorMaterials.ORICHALCUM, EquipmentSlot.CHEST,
                     new FabricItemSettings().group(ModItemGroups.COURSE)));
     public static final Item ORICHALCUM_LEGGINGS = registerItem("orichalcum_leggings",
-            new ArmorItem(ModArmorMaterials.ORICHALCUM, EquipmentSlot.LEGS,
+            new OrichalcumArmorItem(ModArmorMaterials.ORICHALCUM, EquipmentSlot.LEGS,
                     new FabricItemSettings().group(ModItemGroups.COURSE)));
     public static final Item ORICHALCUM_BOOTS = registerItem("orichalcum_boots",
-            new ArmorItem(ModArmorMaterials.ORICHALCUM, EquipmentSlot.FEET,
+            new OrichalcumArmorItem(ModArmorMaterials.ORICHALCUM, EquipmentSlot.FEET,
                     new FabricItemSettings().group(ModItemGroups.COURSE)));
 
     public static final Item ORICHALCUM_HORSE_ARMOR = registerItem("orichalcum_horse_armor",

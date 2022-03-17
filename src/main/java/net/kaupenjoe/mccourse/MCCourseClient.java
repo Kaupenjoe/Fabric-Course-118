@@ -11,12 +11,15 @@ import net.kaupenjoe.mccourse.block.ModBlocks;
 import net.kaupenjoe.mccourse.entity.ModEntities;
 import net.kaupenjoe.mccourse.entity.client.RaccoonRenderer;
 import net.kaupenjoe.mccourse.entity.client.TigerRenderer;
+import net.kaupenjoe.mccourse.entity.client.armor.OrichalcumArmorRenderer;
 import net.kaupenjoe.mccourse.event.ReplaceTitleScreenEvent;
 import net.kaupenjoe.mccourse.fluid.ModFluids;
+import net.kaupenjoe.mccourse.item.ModItems;
 import net.kaupenjoe.mccourse.screen.ModScreenHandlers;
 import net.kaupenjoe.mccourse.screen.OrichalcumBlasterScreen;
 import net.kaupenjoe.mccourse.util.ModModelPredicateProvider;
 import net.minecraft.client.render.RenderLayer;
+import software.bernie.geckolib3.renderers.geo.GeoArmorRenderer;
 
 public class MCCourseClient implements ClientModInitializer {
     @Override
@@ -54,5 +57,7 @@ public class MCCourseClient implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntities.RACCOON, RaccoonRenderer::new);
         EntityRendererRegistry.register(ModEntities.TIGER, TigerRenderer::new);
 
+        GeoArmorRenderer.registerArmorRenderer(new OrichalcumArmorRenderer(), ModItems.ORICHALCUM_BOOTS,
+                ModItems.ORICHALCUM_LEGGINGS, ModItems.ORICHALCUM_CHESTPLATE, ModItems.ORICHALCUM_HELMET);
     }
 }
