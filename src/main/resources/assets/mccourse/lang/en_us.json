@@ -74,6 +74,8 @@
   "item.mccourse.dowsing_rode.tooltip.shift": "Right Click to find valuables",
   "item.mccourse.dowsing_rode.tooltip": "Press §eSHIFT§r for more Information",
 
+  "entity.minecraft.villager.blastmaster": "Blastmaster",
+
   "enchantment.mccourse.lightning_striker": "Lightning Striker",
   "effect.mccourse.freeze": "Freeze"
 }

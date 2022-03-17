@@ -12,6 +12,7 @@ import net.kaupenjoe.mccourse.potion.ModPotions;
 import net.kaupenjoe.mccourse.recipe.ModRecipes;
 import net.kaupenjoe.mccourse.util.ModLootTableModifiers;
 import net.kaupenjoe.mccourse.util.ModRegistries;
+import net.kaupenjoe.mccourse.villager.ModVillagers;
 import net.kaupenjoe.mccourse.world.feature.ModConfiguredFeatures;
 import net.kaupenjoe.mccourse.world.gen.ModWorldGen;
 import net.kaupenjoe.mccourse.world.structures.ModStructures;
@@ -49,6 +50,7 @@ public class MCCourseMod implements ModInitializer {
 		ModPotions.registerPotions();
 
 		ModStructures.registerStructureFeatures();
+		ModVillagers.setupPOIs();
 
 		GeckoLib.initialize();
 	}

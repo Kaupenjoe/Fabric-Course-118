@@ -15,6 +15,7 @@ import net.kaupenjoe.mccourse.entity.custom.RaccoonEntity;
 import net.kaupenjoe.mccourse.entity.custom.TigerEntity;
 import net.kaupenjoe.mccourse.event.ModPlayerEventCopyFrom;
 import net.kaupenjoe.mccourse.item.ModItems;
+import net.kaupenjoe.mccourse.villager.ModVillagers;
 import net.minecraft.block.ComposterBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -78,6 +79,30 @@ public class ModRegistries {
                     factories.add((entity, random) -> new TradeOffer(
                             new ItemStack(Items.EMERALD, 6),
                             new ItemStack(ModItems.ORICHALCUM_PAXEL, 1),
+                            12,3,0.08f));
+                });
+
+        TradeOfferHelper.registerVillagerOffers(ModVillagers.BLAST_MASTER, 1,
+                factories -> {
+                    factories.add((entity, random) -> new TradeOffer(
+                            new ItemStack(Items.EMERALD, 9),
+                            new ItemStack(ModItems.ORICHALCUM_PAXEL, 1),
+                            12,3,0.08f));
+                });
+
+        TradeOfferHelper.registerVillagerOffers(ModVillagers.BLAST_MASTER, 1,
+                factories -> {
+                    factories.add((entity, random) -> new TradeOffer(
+                            new ItemStack(Items.EMERALD, 5),
+                            new ItemStack(ModItems.ORICHALCUM_PICKAXE, 1),
+                            12,3,0.08f));
+                });
+
+        TradeOfferHelper.registerVillagerOffers(ModVillagers.BLAST_MASTER, 2,
+                factories -> {
+                    factories.add((entity, random) -> new TradeOffer(
+                            new ItemStack(Items.EMERALD, 3),
+                            new ItemStack(ModItems.ORICHALCUM_SHOVEL, 1),
                             12,3,0.08f));
                 });
     }
