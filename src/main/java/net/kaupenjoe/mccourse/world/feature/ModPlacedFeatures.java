@@ -23,4 +23,12 @@ public class ModPlacedFeatures {
     public static final RegistryEntry<PlacedFeature> ORICHALCUM_ORE_PLACED = PlacedFeatures.register("orichalcum_ore_placed",
             ModConfiguredFeatures.ORICHALCUM_ORE, ModOreFeatures.modifiersWithCount(7,
                     HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-80), YOffset.aboveBottom(80))));
+
+
+
+    public static final RegistryEntry<PlacedFeature> ORICHALCUM_GEODE_PLACED = PlacedFeatures.register("orichalcum_geode_placed",
+            ModConfiguredFeatures.ORICHALCUM_GEODE, RarityFilterPlacementModifier.of(42),
+            SquarePlacementModifier.of(),
+            HeightRangePlacementModifier.uniform(YOffset.aboveBottom(6), YOffset.aboveBottom(50)),
+            BiomePlacementModifier.of());
 }
