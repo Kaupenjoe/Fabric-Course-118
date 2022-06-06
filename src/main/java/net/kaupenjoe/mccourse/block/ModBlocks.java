@@ -123,6 +123,9 @@ public class ModBlocks {
     public static final Block WINTER_WINDOW = registerBlock("winter_window",
             new GlassBlock(FabricBlockSettings.copy(Blocks.GLASS).nonOpaque().strength(3.0f)), ModItemGroups.COURSE);
 
+    public static final Block PEDESTAL = registerBlock("pedestal",
+            new PedestalBlock(FabricBlockSettings.of(Material.STONE).strength(3.0f).nonOpaque()), ModItemGroups.COURSE);
+
 
     private static Block registerBlockWithoutBlockItem(String name, Block block) {
         return Registry.register(Registry.BLOCK, new Identifier(MCCourseMod.MOD_ID, name), block);

@@ -9,11 +9,17 @@ import net.minecraft.util.registry.Registry;
 
 public class ModBlockEntities {
     public static BlockEntityType<OrichalcumBlasterEntity> ORICHALCUM_BLASTER;
+    public static BlockEntityType<PedestalBlockEntity> PEDESTAL;
 
     public static void registerAllEntities() {
         ORICHALCUM_BLASTER = Registry.register(Registry.BLOCK_ENTITY_TYPE,
                 new Identifier(MCCourseMod.MOD_ID, "orichalcum_blaster"),
                         FabricBlockEntityTypeBuilder.create(OrichalcumBlasterEntity::new,
                                 ModBlocks.ORICHALCUM_BLASTER).build(null));
+
+        PEDESTAL = Registry.register(Registry.BLOCK_ENTITY_TYPE,
+                new Identifier(MCCourseMod.MOD_ID, "pedestal"),
+                        FabricBlockEntityTypeBuilder.create(PedestalBlockEntity::new,
+                                ModBlocks.PEDESTAL).build(null));
     }
 }

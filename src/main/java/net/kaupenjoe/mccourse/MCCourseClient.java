@@ -4,10 +4,13 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
+import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.screen.v1.ScreenEvents;
 import net.fabricmc.fabric.api.client.screenhandler.v1.ScreenRegistry;
 import net.kaupenjoe.mccourse.block.ModBlocks;
+import net.kaupenjoe.mccourse.block.entity.ModBlockEntities;
+import net.kaupenjoe.mccourse.block.entity.client.PedestalBlockEntityRenderer;
 import net.kaupenjoe.mccourse.entity.ModEntities;
 import net.kaupenjoe.mccourse.entity.client.RaccoonRenderer;
 import net.kaupenjoe.mccourse.entity.client.TigerRenderer;
@@ -59,5 +62,8 @@ public class MCCourseClient implements ClientModInitializer {
 
         GeoArmorRenderer.registerArmorRenderer(new OrichalcumArmorRenderer(), ModItems.ORICHALCUM_BOOTS,
                 ModItems.ORICHALCUM_LEGGINGS, ModItems.ORICHALCUM_CHESTPLATE, ModItems.ORICHALCUM_HELMET);
+
+        BlockEntityRendererRegistry.register(ModBlockEntities.PEDESTAL, PedestalBlockEntityRenderer::new);
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PEDESTAL, RenderLayer.getCutout());
     }
 }
