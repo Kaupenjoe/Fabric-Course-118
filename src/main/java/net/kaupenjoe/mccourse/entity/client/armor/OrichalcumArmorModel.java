@@ -7,17 +7,17 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 
 public class OrichalcumArmorModel extends AnimatedGeoModel<OrichalcumArmorItem> {
     @Override
-    public Identifier getModelLocation(OrichalcumArmorItem object) {
+    public Identifier getModelResource(OrichalcumArmorItem object) {
         return new Identifier(MCCourseMod.MOD_ID, "geo/orichalcum_armor.geo.json");
     }
 
     @Override
-    public Identifier getTextureLocation(OrichalcumArmorItem object) {
+    public Identifier getTextureResource(OrichalcumArmorItem object) {
         return new Identifier(MCCourseMod.MOD_ID, "textures/models/armor/orichalcum_armor_texture.png");
     }
 
     @Override
-    public Identifier getAnimationFileLocation(OrichalcumArmorItem animatable) {
+    public Identifier getAnimationResource(OrichalcumArmorItem animatable) {
         return new Identifier(MCCourseMod.MOD_ID, "animations/armor_animation.json");
     }
 }

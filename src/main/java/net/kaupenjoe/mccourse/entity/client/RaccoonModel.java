@@ -7,17 +7,17 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 
 public class RaccoonModel extends AnimatedGeoModel<RaccoonEntity> {
     @Override
-    public Identifier getModelLocation(RaccoonEntity entity) {
+    public Identifier getModelResource(RaccoonEntity entity) {
         return new Identifier(MCCourseMod.MOD_ID, "geo/raccoon.geo.json");
     }
 
     @Override
-    public Identifier getTextureLocation(RaccoonEntity entity) {
+    public Identifier getTextureResource(RaccoonEntity entity) {
         return RaccoonRenderer.LOCATION_BY_VARIANT.get(entity.getVariant());
     }
 
     @Override
-    public Identifier getAnimationFileLocation(RaccoonEntity entity) {
+    public Identifier getAnimationResource(RaccoonEntity entity) {
         return new Identifier(MCCourseMod.MOD_ID, "animations/raccoon.animation.json");
     }
 }

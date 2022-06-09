@@ -27,7 +27,7 @@ public class RaccoonRenderer extends GeoEntityRenderer<RaccoonEntity> {
     }
 
     @Override
-    public Identifier getTextureLocation(RaccoonEntity entity) {
+    public Identifier getTextureResource(RaccoonEntity entity) {
         return LOCATION_BY_VARIANT.get(entity.getVariant());
     }
 }

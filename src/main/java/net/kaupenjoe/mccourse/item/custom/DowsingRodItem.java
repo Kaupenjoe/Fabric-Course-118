@@ -6,7 +6,6 @@ import net.kaupenjoe.mccourse.util.InventoryUtil;
 import net.kaupenjoe.mccourse.util.ModTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.EntityType;
@@ -19,9 +18,7 @@ import net.minecraft.item.ItemUsageContext;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
-import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
@@ -75,7 +72,7 @@ public class DowsingRodItem extends Item {
             }
 
             if(!foundBlock) {
-                player.sendMessage(new TranslatableText("item.mccourse.dowsing_rod.no_valuables"), false);
+                player.sendMessage(Text.translatable("item.mccourse.dowsing_rod.no_valuables"), false);
             }
         }
 
@@ -99,14 +96,14 @@ public class DowsingRodItem extends Item {
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         if(Screen.hasShiftDown()) {
-            tooltip.add(new TranslatableText("item.mccourse.dowsing_rode.tooltip.shift"));
+            tooltip.add(Text.translatable("item.mccourse.dowsing_rode.tooltip.shift"));
         } else {
-            tooltip.add(new TranslatableText("item.mccourse.dowsing_rode.tooltip"));
+            tooltip.add(Text.translatable("item.mccourse.dowsing_rode.tooltip"));
         }
     }
 
     private void outputValuableCoordinates(BlockPos blockPos, PlayerEntity player, Block blockBelow) {
-        player.sendMessage(new LiteralText("Found " + blockBelow.asItem().getName().getString() + " at " +
+        player.sendMessage(Text.literal("Found " + blockBelow.asItem().getName().getString() + " at " +
                 "(" + blockPos.getX() + ", " + blockPos.getY() + "," + blockPos.getZ() + ")"), false);
     }
 

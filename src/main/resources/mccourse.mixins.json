@@ -2,13 +2,12 @@
   "required": true,
   "minVersion": "0.8",
   "package": "net.kaupenjoe.mccourse.mixin",
-  "compatibilityLevel": "JAVA_16",
+  "compatibilityLevel": "JAVA_17",
   "mixins": [
     "ModEntityDataSaver",
     "SignTypeAccessor",
     "BlockEntityTypeMixin",
-    "BrewingRecipeRegistryMixin",
-    "StructureFeatureAccessor"
+    "BrewingRecipeRegistryMixin"
   ],
   "client": [
     "ExampleMixin",

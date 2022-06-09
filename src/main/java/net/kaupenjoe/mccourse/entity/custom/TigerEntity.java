@@ -187,7 +187,6 @@ public class TigerEntity extends TameableEntity implements Mount, IAnimatable {
     }
 
     /* RIDEABLE */
-    @Override
     public boolean canBeControlledByRider() {
         return this.getPrimaryPassenger() instanceof LivingEntity;
     }

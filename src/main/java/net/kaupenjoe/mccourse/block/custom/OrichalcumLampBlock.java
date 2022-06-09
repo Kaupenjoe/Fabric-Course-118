@@ -10,9 +10,8 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
-
-import java.util.Random;
 
 public class OrichalcumLampBlock extends Block {
     public static final BooleanProperty CLICKED = BooleanProperty.of("clicked");

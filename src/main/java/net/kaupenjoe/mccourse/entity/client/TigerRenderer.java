@@ -17,7 +17,7 @@ public class TigerRenderer extends GeoEntityRenderer<TigerEntity> {
     }
 
     @Override
-    public Identifier getTextureLocation(TigerEntity entity) {
+    public Identifier getTextureResource(TigerEntity entity) {
         return new Identifier(MCCourseMod.MOD_ID, "textures/entity/tiger/tiger.png");
     }
 

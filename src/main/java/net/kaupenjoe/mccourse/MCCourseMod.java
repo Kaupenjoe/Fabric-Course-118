@@ -50,7 +50,6 @@ public class MCCourseMod implements ModInitializer {
 		ModPotions.registerPotions();
 
 		ModStructures.registerStructureFeatures();
-		ModVillagers.setupPOIs();
 
 		GeckoLib.initialize();
 	}
